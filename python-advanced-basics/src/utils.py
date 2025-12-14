@@ -1,4 +1,4 @@
-from errors import ValidationError
+from .errors import ValidationError
 
 def validate_email(email):
     if "@" not in email:
