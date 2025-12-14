@@ -1,3 +1,5 @@
+from src.generators.utils import isPrime
+
 def create_file_more_than_n_lines(file_path, n):
     """Crea un archivo de texto con más de n líneas.
 
@@ -19,16 +21,25 @@ def create_file_more_than_n_lines(file_path, n):
         for i in range(1, n + 2):  # Crear n + 1 líneas
             f.write(f"Línea {i}\n")
 
-def read_file_and_create_new_only_with_odd(file_path)
-    with open(file_path, 'r', encodig='utf-8') as f:
-        [isprime(line) for line in f.readlines()]
 
-def isprime(value):
-    true
+def create_prime_file(name_file):
+    with open(name_file, 'w', encoding='utf-8') as f:
+        for index, line in enumerate(lines_from_file("archivo.python.txt"), start=1):
+            if isPrime(index):
+                f.write(line)
+            else:
+                print(f"El índice {index} no es primo, se omite la línea.")
+
+def lines_from_file(file_path):
+    with open(file_path, 'r', encoding='utf-8') as f:
+        for line in f:
+            yield line
+
+#put = (writem(line) for line in f.readlines() if isPrime(index))
 
 if __name__ == "__main__":
-    # create_file_more_than_n_lines("archivo.python.txt", 1000000)
+    # create_file_more_than_n_lines("archivo.python.txt", 1000)
 
     #  read file and create a new one with the odd numbers
-    read_file_and_create_new_only_with_odd("archivo.python.txt")
+    create_prime_file("archivo.python.out.txt")
 

@@ -1,4 +1,4 @@
-from src.models import User
+from src.advanced_basic.models import User
 
 def test_user_creation():
     user = User(id=1, name="testuser", email="testuser@example.com")

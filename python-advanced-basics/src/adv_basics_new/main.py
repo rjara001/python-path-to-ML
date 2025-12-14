@@ -1,3 +1,6 @@
+from src.generators.utils import isPrime
+
+
 def printCuadradosYPares(serie):
     cuadrados = [x ** 2 for x in serie]
     print("Cuadrados:", cuadrados)
@@ -12,21 +15,6 @@ def printRedondeoNumerosFlotantes(serie):
 def printValoresPrimos(serie):
     primos = [x for x in serie if isPrime(x)]
     print("Números primos:", primos)
-
-def isPrime(n) -> bool:
-    if n <= 2:
-        return True
-
-    if n % 2 == 0:
-        return False
-
-    limit = int(n * 0.5) + 1
-
-    for i in range(3, limit, 2):
-        if n % i == 0:
-            return False
-
-    return True
 
 def main() -> None:
     serie = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
